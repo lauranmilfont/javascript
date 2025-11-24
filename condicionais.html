@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Idade</title>
+    <style>
+        body {
+            background-color: #ffe4f0; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #d63384; 
+        }
+
+        input {
+            padding: 10px;
+            border: 2px solid #d63384;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #ff69b4; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #d63384; 
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #c2185b; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar Idade</h1>
+
+    <input type="text" id="idade" placeholder="Digite a sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIdade(){
+            const idade = document.getElementById("idade").value;
+
+            if(idade >= 18){
+                document.getElementById("resultado").innerText = "Você é maior de idade";
+            }else{
+                document.getElementById("resultado").innerText = "Você é menor de idade";
+            }
+        }
+    </script>
+</body>
+</html>
